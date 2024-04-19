@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: white;
+  overflow: hidden;
+  -webkit-animation: animation 20s linear infinite;
+  animation: animate 20s linear infinite;
+  bottom: -120px;
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-duration: 15s;
+  animation-duration: 15s;
+}
+
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  -webkit-animation-duration: 15s;
+  animation-duration: 15s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-100vh) rotate(360deg);
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-100vh) rotate(360deg);
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.login {
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#8942a8),
+    to(#ba382f)
+  );
+  background: linear-gradient(to left, #8942a8, #ba382f);
+  overflow: hidden;
+  .stock-limit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #010101;
+    width: 400px;
+    height: 180px;
+    flex-direction: column;
+    display: none;
+    em {
+      position: absolute;
+      width: 80%;
+      top: 20%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      line-height: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+}
+.banner .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+
+  backdrop-filter: blur(5px);
+  display: none;
+}
+
+.login img {
+  width:100%;
+  height:  100%;
+  object-fit:cover;
+}
+
+form {
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 9999;
+    box-shadow: 0px 0px 10px #fff;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: brown;
+    transition: .3s;
+}
+
+form label {
+    position: relative;
+    height: 100%;
+    display: block;
+}
+
+form input[type="submit"] {
+    border: none;
+    background-color: brown;
+    color: #010101;
+}
+
+form label span {
+    font-size: 10px;
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    transition: .3s;
+    background-color:#010101;
+    padding: 2px;
+}
+
+label > input:focus + span {
+    color: brown;
+    font-size: 12px;
+    transition: .3s;
+    top: -10px;
+}
+
+.termofuse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.termofuse input[type="checkbox"] {
+    width: 15px;
+height: 15px;
+margin: 0;
+}
+
+.termofuse a {
+    color: brown;
+    text-decoration: none;
+}
+
+.submit {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    background-color: brown;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 0px 5px brown;
+  }
+
+.submit span {
+    position: absolute;
+    display: block;
+  }
+  
+  .submit span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .submit span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .submit span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .submit span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+.newl{
+    margin-left: 750px;
+    margin-bottom: 600px;
+    margin-top: 150px;
+    position: absolute;
+}
+
+.formcd{
+    background-color: #010101;
+    color: white;
+}
+
+/* For the navigation */
+.navbar {
+    padding: 1.25rem;
+    position: relative;
+    z-index: 20;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+/* For the logo */
+.logo {
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-family: serif;
+}
+
+/* For the hamburger menu */
+.hamburger-menu {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    margin-top: 0.25rem;
+    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* For the menu lines */
+.hamburger-menu .hamburger-line {
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* For the menu */
+.menu {
+    color: white;
+    transition: transform 0.3s;
+    transform: translateX(-500px);
+    position: relative;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+/* For the menu items */
+.menu ul {
+    /* width: 100%; */
+  list-style:none;
+  padding:0;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.menu ul li a {
+    /* width: 100%; */
+  list-style:none;
+  color: white;
+  padding:0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.menu {
+    position: fixed; /* Fix the position of the menu */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Position it at the left of the viewport */
+    width: 500px;
+        height: 100vh;
+        padding-left: 80px;
+}
+
+.menu.open {
+  display: flex; /* Show the menu when it's open */
+}
+
+.menu-item {
+  padding: 1.25rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: lightblue; /* Change background color on hover */
+}
+
+.navbar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.navbar1 a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
